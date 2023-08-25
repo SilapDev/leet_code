@@ -23,9 +23,10 @@ var isValid = (s) => {
         const isEqual = (stack[stack.length - 1] === map[char])
         if (isEqual) { stack.pop(); continue; }
 
+        return false;
     }
 
     return (stack.length === 0);
 };
 
-console.log(isValid("(){}[}]"))
+console.log(isValid("(){}[]"))
